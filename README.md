@@ -16,3 +16,7 @@
 
 # Start
 - I will post an explanation of use soon
+
+# Notes
+- The templated isn't done yet
+- I create for fun and learining
