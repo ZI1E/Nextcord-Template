@@ -34,8 +34,7 @@ python3 -m pip install -U "nextcord[voice]"
 py -3 -m pip install -U nextcord[voice]
 ```
 
-**Go to `main.py` and edit your's bot `token` & `prefix`**
-**Now open your terminal and type `py main.py` to run**
+**Go to `main.py` and edit your's bot `token` & `prefix` now open your terminal and type `py main.py` to run**
 
 # Notes
 - The templated isn't done yet
