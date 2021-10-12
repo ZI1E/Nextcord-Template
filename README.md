@@ -1,6 +1,7 @@
 # About?
 - Easy and smooth discord bot template has been built with [nextcord](https://github.com/nextcord/nextcord)
 - because discord.py is dead now so we can use nextcord
+- The project is now under the working
 
 # Other Template With Other Library?
 - Soon i will create other templates with other libraries
@@ -16,6 +17,25 @@
 
 # Start
 - I will post an explanation of use soon
+
+```
+# Linux/macOS
+python3 -m pip install -U nextcord
+
+# Windows
+py -3 -m pip install -U nextcord
+```
+
+```
+# Linux/macOS
+python3 -m pip install -U "nextcord[voice]"
+
+# Windows
+py -3 -m pip install -U nextcord[voice]
+```
+
+**Go to `main.py` and edit your's bot `token` & `prefix`**
+**Now open your terminal and type `py main.py` to run**
 
 # Notes
 - The templated isn't done yet
