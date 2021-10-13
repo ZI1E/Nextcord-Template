@@ -16,7 +16,6 @@ def get_prefix(bot, message):
 settings_file = json.load(open('settings.json'))
 bot = commands.Bot(command_prefix=(get_prefix))
 
-
 @bot.event
 async def on_guild_join(guild): # Add default if bot join any guild
     with open('prefixes.json', 'r') as f:
@@ -55,7 +54,6 @@ async def prefix(ctx, prefix):
         json.dump(prefixes, f, indent=4)
 
     await ctx.reply(f'**Prefix changed to: `{prefix}`**')
-
 
 if __name__ == "__main__":
     for file in os.listdir(cwd + "/cogs"):
