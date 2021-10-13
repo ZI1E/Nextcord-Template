@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 # Versions
 
-# 0.1
+# 0.7.0
 
 - Add Base Things
 - Add Simple Error Handler
