@@ -25,7 +25,7 @@ async def on_ready():
 
     await bot.change_presence(
         activity=nextcord.Game(name=settings_file['activity']), # Changing bot activity
-        status=nextcord.Status.dnd # Bot status // ["idle", "dnd", "online"]
+        status=settings_file['status'] # Bot status // ["idle", "dnd", "online"]
     ) 
 
 bot.run(settings_file['token'])
