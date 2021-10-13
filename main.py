@@ -1,23 +1,23 @@
 import nextcord
 import json
+import os
 
+from pathlib import Path
 from nextcord.ext import commands
 from rich.console import Console
 from rich.table import Table
 
+cwd = Path(__file__).parents[0]
+cwd = str(cwd)
 console = Console()
 
-def get_prefix(message):
+def get_prefix(bot, message):
     with open('prefixes.json', 'r') as f:
         prefixes = json.load(f)
     return prefixes[str(message.guild.id)]
 
 settings_file = json.load(open('settings.json'))
 bot = commands.Bot(command_prefix=(get_prefix))
-
-@bot.command()
-async def ping(ctx):
-    await ctx.reply('Pong !')
 
 @bot.event
 async def on_ready():
@@ -70,4 +70,9 @@ async def prefix(ctx, prefix):
 
     await ctx.reply(f'**Prefix changed to: `{prefix}`**')
 
-bot.run(settings_file['token'])
+
+if __name__ == "__main__":
+    for file in os.listdir(cwd + "/cogs"):
+        if file.endswith(".py") and not file.startswith("_"):
+            bot.load_extension(f"cogs.{file[:-3]}")
+    bot.run(settings_file['token'])
