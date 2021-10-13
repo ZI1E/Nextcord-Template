@@ -7,7 +7,7 @@
 - Soon i will create other templates with other libraries
 
 # Information
-<p text-align="center">
+<p align="center">
   <a href="//discord.gg/TbC5KNzrJJ"><img src="https://img.shields.io/discord/895648150621151252?logo=discord"></a>
   <a href="//github.com/ZI1E/We-Template/releases"><img src="https://img.shields.io/github/v/release/ZI1E/We-Template"></a>
   <a href="//github.com/ZI1E/We-Template/commits/main"><img src="https://img.shields.io/github/last-commit/ZI1E/We-Template"></a>
