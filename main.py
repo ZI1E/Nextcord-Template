@@ -1,4 +1,3 @@
-import nextcord
 import json
 import os
 
@@ -8,6 +7,7 @@ from nextcord.ext import commands
 cwd = Path(__file__).parents[0]
 cwd = str(cwd)
 
+
 def get_prefix(bot, message):
     with open('prefixes.json', 'r') as f:
         prefixes = json.load(f)
@@ -15,6 +15,7 @@ def get_prefix(bot, message):
 
 settings_file = json.load(open('settings.json'))
 bot = commands.Bot(command_prefix=(get_prefix))
+
 
 @bot.event
 async def on_guild_join(guild): # Add default if bot join any guild
@@ -25,6 +26,7 @@ async def on_guild_join(guild): # Add default if bot join any guild
 
     with open('prefixes.json', 'w') as f:
         json.dump(prefixes, f, indent=4)
+
 
 @bot.event
 async def on_guild_remove(guild): # When the bot is left from the guild prefix will deleted automatically
