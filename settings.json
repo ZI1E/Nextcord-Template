@@ -1,4 +1,5 @@
 {
-    "token": "YOUR_BOT_TOKEN",
-    "prefix": "YOUR_PREFIX"
+    "token": "YOUR_BOT_TOKEN_HERE",
+    "prefix": "YOUR_PREFIX_HERE",
+    "activity": "!help"
 }
