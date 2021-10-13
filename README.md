@@ -45,7 +45,7 @@ pip install -r requirements.txt
 # 0.1
 
 - Add Base Things
-- Add Simple Error Hangler
+- Add Simple Error Handler
 - Add Events Cogs
 - Custom Prefix Command
 - Custom Settings File
