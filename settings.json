@@ -1,5 +1,7 @@
 {
     "token": "YOUR_BOT_TOKEN_HERE",
-    "prefix": "YOUR_PREFIX_HERE",
-    "activity": "!help"
+    "prefix": "YOUR_BOT_PREFIX_HERE",
+
+    "activity": "!help",
+    "status": "dnd|idle|online"
 }
