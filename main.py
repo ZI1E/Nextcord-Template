@@ -24,7 +24,7 @@ async def on_ready():
     console.print(table)
 
     await bot.change_presence(
-        activity=nextcord.Game(name="!help"), # Changing bot activity
+        activity=nextcord.Game(name=settings_file['activity']), # Changing bot activity
         status=nextcord.Status.dnd # Bot status // ["idle", "dnd", "online"]
     ) 
 
