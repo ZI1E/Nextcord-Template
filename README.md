@@ -39,3 +39,4 @@ py -3 -m pip install -U nextcord[voice]
 # Notes
 - The templated isn't done yet
 - I create for fun and learining
+- This is not a full bot with commands this is just a template to run your's command in it
