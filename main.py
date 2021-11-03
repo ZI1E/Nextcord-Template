@@ -14,7 +14,7 @@ def get_prefix(bot, message):
     return prefixes[str(message.guild.id)]
 
 
-settings_file = json.load(open('settings.json'))
+SettingsFile = json.load(open('settings.json'))
 Client = commands.Bot(command_prefix=(get_prefix))
 
 
@@ -23,7 +23,7 @@ async def on_guild_join(guild):  # Add default if bot join any guild
     with open('prefixes.json', 'r') as f:
         prefixes = json.load(f)
 
-    prefixes[str(guild.id)] = settings_file['prefix']
+    prefixes[str(guild.id)] = SettingsFile['prefix']
 
     with open('prefixes.json', 'w') as f:
         json.dump(prefixes, f, indent=4)
@@ -62,4 +62,4 @@ if __name__ == "__main__":
     for file in os.listdir(cwd + "/cogs"):
         if file.endswith(".py") and not file.startswith("_"):
             Client.load_extension(f"cogs.{file[:-3]}")
-    Client.run(settings_file['token'])
+    Client.run(SettingsFile['token'])
