@@ -7,7 +7,7 @@ from rich.table import Table
 
 console = Console()
 
-settings_file = json.load(open('settings.json'))
+SettingsFile = json.load(open('settings.json'))
 
 class Events(commands.Cog):
     def __init__(self, bot):
@@ -22,8 +22,8 @@ class Events(commands.Cog):
         console.print(table)
 
         await self.bot.change_presence(
-            activity=nextcord.Game(name=settings_file['activity']), # Changing bot activity
-            status=settings_file['status'] # Bot status // ["idle", "dnd", "online"]
+            activity=nextcord.Game(name=SettingsFile['activity']), # Changing bot activity
+            status=SettingsFile['status'] # Bot status // ["idle", "dnd", "online"]
         ) 
 
 
