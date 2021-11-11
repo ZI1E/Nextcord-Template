@@ -18,8 +18,9 @@ SettingsFile = json.load(open('settings.json'))
 Client = commands.Bot(command_prefix=(get_prefix))
 
 
+# Add default if bot join any guild
 @Client.event
-async def on_guild_join(guild):  # Add default if bot join any guild
+async def on_guild_join(guild):
     with open('prefixes.json', 'r') as f:
         prefixes = json.load(f)
 
@@ -28,9 +29,8 @@ async def on_guild_join(guild):  # Add default if bot join any guild
     with open('prefixes.json', 'w') as f:
         json.dump(prefixes, f, indent=4)
 
-
-@Client.event
 # When the bot is left from the guild prefix will deleted automatically
+@Client.event
 async def on_guild_remove(guild):
     with open('prefixes.json', 'r') as f:
         prefixes = json.load(f)
