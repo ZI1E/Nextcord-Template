@@ -20,7 +20,7 @@ class Errors(commands.Cog):
             await ctx.reply("You've reached max capacity of command usage at once, please finish the previous one...**")
 
         elif isinstance(err, errors.CommandOnCooldown):
-            await ctx.reply(f"**This command is on cooldown... try again in `{err.retry_after:.2f}`` seconds.**")
+            await ctx.reply(f"**This command is on cooldown... try again in `{err.retry_after:.2f}` seconds.**")
 
         elif isinstance(err, errors.CommandNotFound):
             await ctx.reply(f"**This command is not found... try again**")

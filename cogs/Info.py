@@ -6,7 +6,8 @@ class Info(commands.Cog):
 
 
     @commands.command()
-    async def ping(ctx):
+    @commands.cooldown(1, 5, commands.BucketType.member) # Cooldown
+    async def ping(self, ctx):
         await ctx.reply('Pong !')
 
 
