@@ -16,7 +16,7 @@ def get_prefix(bot, message):
 
 SettingsFile = json.load(open('settings.json'))
 Client = commands.Bot(command_prefix=(get_prefix))
-
+Client.remove_command("help") # To create a personal help command 
 
 # Add default if bot join any guild
 @Client.event
